@@ -13,6 +13,7 @@
 import React from "react";
 import axios from "axios";
 import loading from './LoadingAnimation';
+import FacultyCard from './FacultyCard';
 import './faculty.css';
 
 
@@ -41,31 +42,26 @@ export default class Faculty extends React.Component {
 
         } else {
             content = (
-                <div>
+                <div className="container">
                     {faculty.map((member, index) => (
+                        <div className="card">
 
-                        <div className="faculty-member" key={index}>
-                            <hr></hr>
-                            <h1>{member.name}</h1>
-                            <div className="wrapper">
-                                {member.imagePath && <img src={member.imagePath} alt={member.username} />}
-                                <div className="info-container">
-                                    {/* Chat GPT helped me with the conditionals  */}
-                                    {member.name && <p>User name: {member.username}</p>}
-                                    {member.tagline && <p>Tagline: {member.tagline}</p>}
-                                    {member.title && <p>Title: {member.title}</p>}
-                                    {member.interestArea && <p>Interest Area: {member.interestArea}</p>}
-                                    {member.office && <p>Office: {member.office}</p>}
-                                    {member.website && <p>Website: {member.website}</p>}
-                                    {member.phone && <p>Phone: {member.phone}</p>}
-                                    {member.email && <p>Email: {member.email}</p>}
-                                    {member.twitter && <p>Twitter: {member.twitter}</p>}
-                                    {member.facebook && <p>Facebook: {member.facebook}</p>}
-
-                                </div>
-                            </div>
+                            <FacultyCard
+                                key={index}
+                                username={member.username}
+                                name={member.name}
+                                tagline={member.tagline}
+                                title={member.title}
+                                interestArea={member.interestArea}
+                                office={member.office}
+                                website={member.website}
+                                phone={member.phone}
+                                email={member.email}
+                                twitter={member.twitter}
+                                facebook={member.facebook}
+                                imagepath={member.imagePath}
+                            />
                         </div>
-
                     ))}
                 </div>
             )
