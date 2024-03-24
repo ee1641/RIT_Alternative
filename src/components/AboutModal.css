@@ -1,0 +1,12 @@
+/* AboutModal.css */
+#custom {
+    color: #e65100;
+    border-color: #e65100;
+    /* background-color: #e65100; */
+}
+
+#custom:hover {
+    color: black;
+    background-color: #e65100;
+    transition: 2s ease;
+}

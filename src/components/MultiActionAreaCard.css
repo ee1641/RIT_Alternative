@@ -1,0 +1,11 @@
+.Card {
+    max-width: 345px;
+}
+
+.Content {
+    min-height: 300px;
+}
+
+#title {
+    margin-bottom: 50px;
+}

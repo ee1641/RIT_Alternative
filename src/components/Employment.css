@@ -1,0 +1,18 @@
+table {
+    text-align: justify;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.employer {
+    padding-right: 50vh;
+}
+
+.columnSize {
+    padding-right: 25vh;
+}
+
+.buttons {
+    margin-bottom: 10vh;
+}

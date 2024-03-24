@@ -1,0 +1,11 @@
+#about {
+    /* https://www.geeksforgeeks.org/how-to-darken-an-image-using-css/ - reference on how to darken an image*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)), url('https://www.rit.edu/alumni/sites/rit.edu.alumni/files/2020-04/RIT_DAR_Zoom_BG_20.jpg');
+    padding: 36vh;
+    color: white;
+}
+
+#about h1 {
+    color: orangered;
+}

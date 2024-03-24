@@ -1,0 +1,43 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.degree {
+    width: 300px;
+    height: 420px;
+    padding: 5vh;
+    margin: 5vh;
+    background-color: orangered;
+    border-radius: 2vh;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: justify;
+}
+
+#degrees {
+    height: 100%;
+    width: 100%;
+    background-color: cornsilk;
+}
+
+.degree h3 {
+    text-align: left;
+    color: black;
+}
+
+#degree-div h1 {
+    font-size: 5vh;
+    margin: 0;
+    background-color: orangered;
+    padding: 3vh;
+    margin-bottom: 3vh;
+}
+
+.container .card {
+    margin-right: 30px;
+}
