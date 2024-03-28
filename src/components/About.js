@@ -16,7 +16,15 @@ import loading from './LoadingAnimation';
 import './About.css';
 import AboutModal from './AboutModal';
 
+/**
+ * Class component representing the About section.
+ * Gets data from an API and renders information about RIT.
+ */
 export default class About extends React.Component {
+    /**
+      * Constructs the component and intializes state.
+      * @param {Object} props - Properties passed to the component.
+      */
     constructor(props) {
         super(props);
         this.state = {
@@ -25,6 +33,10 @@ export default class About extends React.Component {
         };
     }
 
+    /**
+     * Fetches data from the API.
+     * Updates the state with fetched data and sets loaded boolean to true.
+     */
     componentDidMount() {
         axios.get('https://people.rit.edu/~dsbics/proxy/https://ischool.gccis.rit.edu/api/about')
             .then((response) => {
@@ -32,6 +44,12 @@ export default class About extends React.Component {
             });
     }
 
+    /**
+     * Renders the About component.
+     * If data is not yet loaded, displays a loading animation.
+     * Once data is loaded, renders information about RIT.
+     * @returns {JSX.Element} Content to be rendered.
+     */
     render() {
         const { about, loaded } = this.state;
 

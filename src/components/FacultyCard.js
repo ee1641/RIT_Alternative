@@ -6,7 +6,17 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import AboutModal from './AboutModal';
 
+
+/**
+ * Component representing a card for displaying information about a faculty member.
+ * @extends React.Component
+ */
 export default class FacultyCard extends React.Component {
+
+    /**
+     * Renders the FacultyCard component.
+     * @returns {JSX.Element} JSX representing the FacultyCard component.
+     */
     render() {
         const { username, name, tagline, title, interestArea, office, website, phone, email, twitter, facebook, imagepath } = this.props;
         let info = '';
@@ -29,15 +39,14 @@ export default class FacultyCard extends React.Component {
                         {name}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                        <Typography>Position: {title}</Typography>
-                        <Typography>Phone: {phone}</Typography>
-                        <Typography>Email: {email}</Typography>
-                        <Typography>Office: {office}</Typography>
+                        Position: {title}<br />
+                        Phone: {phone}<br />
+                        Email: {email}<br />
+                        Office: {office}<br />
                     </Typography>
                 </CardContent>
                 <CardActions>
                     <AboutModal
-                        // GPT helped me diplay the data in a new line for the information
                         quote={<pre>{info}</pre>}
                         name={"Read More"}
                         header={"Additional Information"}

@@ -1,33 +1,11 @@
-.wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
+.card {
+    width: 345px;
+    margin-bottom: 5px;
+    margin-left: 5vh;
 }
 
-td,
-th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-
-.info-container {
-    flex-direction: column;
-    text-align: justify;
-}
-
-.wrapper img {
-    width: 30vh;
-    height: 36vh;
-    margin-right: 50vh;
-    padding-bottom: 5vh;
-}
-
-.faculty-member h1 {
-    text-align: left;
-    color: orangered;
+@media (max-width: 600px) {
+    .card {
+        margin: 0;
+    }
 }

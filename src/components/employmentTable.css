@@ -1,0 +1,26 @@
+#table {
+    overflow-x: auto;
+    width: 150vh;
+}
+
+.searchContainer {
+    margin-left: 69.5%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+}
+
+@media (max-width: 600px) {
+    #table {
+        width: 380px;
+    }
+
+    .searchContainer {
+        margin-left: 40%;
+    }
+
+    .tableText {
+        font-size: 12.6px;
+    }
+
+}

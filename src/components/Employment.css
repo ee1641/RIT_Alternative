@@ -16,3 +16,26 @@ table {
 .buttons {
     margin-bottom: 10vh;
 }
+
+
+#employment {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .table-div {
+        width: 100vw;
+        padding-top: 7vh;
+        padding-bottom: 7vh;
+    }
+
+    .banner {
+        margin-bottom: 7vh;
+        font-size: 4vh;
+    }
+
+    .container {
+        margin: 2px;
+    }
+
+}

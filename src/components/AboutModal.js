@@ -5,7 +5,15 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import './AboutModal.css';
 
+/**
+ * Class component representing a modal for displaying about information.
+ * @extends React.Component
+ */
 export default class AboutModal extends React.Component {
+    /**
+     * Constructor for AboutModal component.
+     * @param {Object} props - Properties passed to the component.
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -13,14 +21,24 @@ export default class AboutModal extends React.Component {
         };
     }
 
+    /**
+     * Opens the modal.
+     */
     handleOpen = () => {
         this.setState({ open: true });
     }
 
+    /**
+     * Closess the modal.
+     */
     handleClose = () => {
         this.setState({ open: false });
     }
 
+    /**
+     * Renders the AboutModal component.
+     * @returns {JSX.Element} JSX representing the AboutModal component.
+     */
     render() {
         const { quote, quoteAuthor, name, header } = this.props;
         const { open } = this.state;

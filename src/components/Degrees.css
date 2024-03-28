@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    margin: 10vh;
+    margin: 5vh;
     justify-content: center;
     align-items: center;
 
@@ -22,7 +22,6 @@
 #degrees {
     height: 100%;
     width: 100%;
-    background-color: cornsilk;
 }
 
 .degree h3 {
@@ -30,14 +29,16 @@
     color: black;
 }
 
-#degree-div h1 {
+/* #degree-div h1 {
     font-size: 5vh;
     margin: 0;
     background-color: orangered;
     padding: 3vh;
     margin-bottom: 3vh;
-}
+} */
+@media (max-width: 600px) {
+    .container {
+        margin: 1vh;
+    }
 
-.container .card {
-    margin-right: 30px;
 }

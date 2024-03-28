@@ -1,10 +1,22 @@
 import React from "react";
 import axios from "axios";
 import loading from './LoadingAnimation';
-import MultiActionAreaCard from './MultiActionAreaCard'; // Import the MultiActionAreaCard component
+import DegreeCard from './DegreeCard'; // Import the MultiActionAreaCard component
 import './Degrees.css';
 
+
+/**
+ * Class component representing the Degrees page.
+ * This component fetches and displays information about undergraduate and graduate degrees.
+ * User can click on read more Button and addtional Infromation will be displayed in a modal.
+ * @extends React.Component
+ */
 export default class Degrees extends React.Component {
+
+    /**
+     * Constructor for Degrees component.
+     * @param {Object} props - The properties passed to the component.
+     */
     constructor(props) {
         super(props);
         this.state = {
@@ -14,6 +26,10 @@ export default class Degrees extends React.Component {
         };
     }
 
+    /**
+     * Fetches undergraduate and graduate degrees data from an API. 
+     * Once the data is received, update the undergraduate and graduate arrays and set loading to true.
+     */
     componentDidMount() {
         axios.get('https://people.rit.edu/~dsbics/proxy/https://ischool.gccis.rit.edu/api/degrees')
             .then((response) => {
@@ -21,6 +37,10 @@ export default class Degrees extends React.Component {
             });
     }
 
+    /**
+     * Renders the Degrees component.
+     * @returns {JSX.Element} JSX representing the Degrees component.
+     */
     render() {
         const { graduate, undergraduate, loaded } = this.state;
 
@@ -30,13 +50,12 @@ export default class Degrees extends React.Component {
         } else {
             content = (
                 <div id="degree-div">
-                    <h1>Undergraduate Degrees</h1>
+                    <h1 className="banner">Undergraduate Degrees</h1>
                     <div className="container">
                         {undergraduate.map((degree, index) => (
-                            <div className="card">
+                            <div className="card" key={index} style={{ marginBottom: "10vh", marginTop: "10vh" }}>
 
-                                <MultiActionAreaCard
-                                    key={index}
+                                <DegreeCard
                                     title={`${degree.degreeName.toUpperCase()}: ${degree.title}`}
                                     description={degree.description}
                                     concentrations={degree.concentrations}
@@ -44,13 +63,12 @@ export default class Degrees extends React.Component {
                             </div>
                         ))}
                     </div>
-                    <h1>Graduate Degrees</h1>
+                    <h1 className="banner">Graduate Degrees</h1>
                     <div className="container">
                         {graduate.map((degree, index) => (
-                            <div className="card">
+                            <div className="card" key={index} style={{ marginBottom: "10vh", marginTop: "10vh" }}>
 
-                                <MultiActionAreaCard
-                                    key={index}
+                                <DegreeCard
                                     //ChatGPT Helped me with the conditional
                                     title={degree.title ? `${degree.degreeName.toUpperCase()}: ${degree.title}` : degree.degreeName.toUpperCase()}
                                     description={degree.description}

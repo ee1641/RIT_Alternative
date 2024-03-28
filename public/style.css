@@ -136,4 +136,8 @@ input[type=checkbox] {
     .dropdown li:hover {
         background-color: orangered;
     }
+
+    .logo {
+        font-size: 15px;
+    }
 }

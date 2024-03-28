@@ -4,9 +4,18 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
 import AboutModal from './AboutModal';
-import './MultiActionAreaCard.css';
+import './DegreeCard.css';
 
-export default class MultiActionAreaCard extends React.Component {
+/**
+ * Class component representing a degree card.
+ * @extends React.Component
+ */
+export default class DegreeCard extends React.Component {
+
+    /**
+     * Renders the DegreeCard component.
+     * @returns {JSX.Element} JSX representing the DegreeCard component.
+     */
     render() {
         const { title, description, concentrations, availableCertificates } = this.props;
 
@@ -27,7 +36,7 @@ export default class MultiActionAreaCard extends React.Component {
         }
 
         return (
-            <Card className='Card'>
+            <Card className='Card' sx={{ width: 345 }}>
                 <CardActionArea sx={{ minHeight: 345 }}>
                     <CardContent className='Content'>
                         <Typography gutterBottom variant="h5" component="div" id='title'>
